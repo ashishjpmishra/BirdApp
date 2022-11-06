@@ -47,7 +47,7 @@ function Feed({props}) {
 
     const addTweet=(e)=>{
         e.preventDefault();
-        console.log(tweets)
+        // console.log(tweets)
         setTweets((old) =>{
             setVal("");
             return [...old, {postID:globalId, contents:val, postAuthor: loggedIn, createdOn: `${new Date()}`.slice(0,24), updatedOn: 0}]
@@ -114,7 +114,7 @@ function Feed({props}) {
                 <img className="rounded-full h-8 m-4 w-8" src="https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png" />
                     <div className="p-4 w-full">
                         <div className="font-semibold">{tweet.postAuthor}<span className="text-slate-500" > - @{tweet.postAuthor}</span></div>
-                        <div>{tweet.contents}</div>
+                        <div className="break-all"><p>{tweet.contents}</p></div>
                         <div className="text-slate-500 text-xs my-2 flex justify-end">{tweet.createdOn}</div>
                         <div className="text-white flex justify-between p-4">
                             <div className="p-2 hover:bg-slate-800 rounded-full"><img className="h-4" src="https://img.icons8.com/external-inkubators-glyph-inkubators/25/FFFFFF/external-reply-email-inkubators-glyph-inkubators.png"/></div>

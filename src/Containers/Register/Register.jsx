@@ -43,7 +43,8 @@ function Register(props) {
                     <input className="my-4 bg-gray-900 rounded-full" type="text" name="username" required/>
                     <label>Password</label>
                     <input className="my-4 bg-gray-900 rounded-full" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
-                    <button className="px-8 py-2 bg-[#1DA1F2] rounded-full">Sign Up</button>
+                    <p className='text-xs'>*Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+                    <button className="px-8 py-2 m-1 bg-[#1DA1F2] rounded-full">Sign Up</button>
                 </form>
                 <Link to="/"><button className="mx-4 text-green-500"> Registered? Login Now</button></Link>
             </div>
